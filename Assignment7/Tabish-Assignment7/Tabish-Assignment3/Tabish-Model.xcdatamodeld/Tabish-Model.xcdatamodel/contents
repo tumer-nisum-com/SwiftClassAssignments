@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="12141" systemVersion="16F73" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Bin" representedClassName="Bin" parentEntity="EntityBase" syncable="YES" codeGenerationType="class">
+        <relationship name="binToItemFK" optional="YES" maxCount="1" deletionRule="No Action" destinationEntity="Item" syncable="YES"/>
+        <relationship name="binToLocationFK" optional="YES" maxCount="1" deletionRule="No Action" destinationEntity="Location" syncable="YES"/>
+    </entity>
+    <entity name="EntityBase" representedClassName="EntityBase" isAbstract="YES" syncable="YES" codeGenerationType="class">
+        <attribute name="entityTypeValue" attributeType="String" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Item" representedClassName="Item" parentEntity="EntityBase" syncable="YES" codeGenerationType="class">
+        <relationship name="itemToBinFK" optional="YES" maxCount="1" deletionRule="No Action" destinationEntity="Bin" syncable="YES"/>
+    </entity>
+    <entity name="Location" representedClassName="Location" parentEntity="EntityBase" syncable="YES" codeGenerationType="class">
+        <relationship name="locationToBinFK" optional="YES" maxCount="1" deletionRule="No Action" destinationEntity="Bin" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Bin" positionX="-27" positionY="18" width="128" height="75"/>
+        <element name="EntityBase" positionX="18" positionY="63" width="128" height="90"/>
+        <element name="Item" positionX="54" positionY="99" width="128" height="60"/>
+        <element name="Location" positionX="18" positionY="63" width="128" height="60"/>
+    </elements>
+</model>
